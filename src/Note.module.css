@@ -1,0 +1,98 @@
+.container {
+    margin-top: 70px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modalHeader {
+    background-color: #3b53e0;
+    color: white;
+}
+
+.modalTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modalBody {
+    padding: 20px;
+}
+
+.formLabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formControl {
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.formControl:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.isInvalid {
+    border-color: #dc3545;
+}
+
+.invalidFeedback {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+.modalFooter {
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btnPrimary {
+    background-color: #3b8fe8;
+    border-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    font-size: 1rem;
+}
+
+.btnPrimary:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.row {
+    margin: auto;
+}
+
+.notesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.noteTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.noNotes {
+    font-size: 1.2rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 20px;
+}

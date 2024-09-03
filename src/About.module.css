@@ -1,0 +1,41 @@
+.container {
+    margin-top: 90px;
+    padding: 30px;
+    background-color: #F0F6F6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #343a40;
+    text-align: center;
+}
+
+.lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #495057;
+}
+
+.featuresList,
+.technologyList {
+    list-style: none;
+    padding-left: 0;
+}
+
+.featureItem,
+.technologyItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #212529;
+}
+
+.featureItem i,
+.technologyItem i {
+    color: #28a745;
+    margin-right: 10px;
+}

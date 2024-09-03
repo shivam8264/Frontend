@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-top: 80px;
+    border-radius: 5px;
+}
+
+.messageList {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.messageItem {
+    display: flex;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+.myMessage {
+    justify-content: flex-end;
+}
+
+.otherMessage {
+    justify-content: flex-start;
+}
+
+.messageText {
+    max-width: 60%; 
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+}
+
+.myMessage .messageText {
+    background-color: #90c6f6;
+    color: black;
+    text-align: left;
+}
+
+.otherMessage .messageText {
+    background-color: #e9ecef;
+    color: black;
+    text-align: left;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.form {
+    display: flex;
+    background-color: #fff;
+}
+
+.input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

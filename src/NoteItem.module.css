@@ -1,0 +1,60 @@
+.noteContainer:nth-child(4n+1) .noteCard {
+    background-color: #DBB1BC;
+}
+
+.noteContainer:nth-child(4n+2) .noteCard {
+    background-color: #D3C4E3;
+}
+
+.noteContainer:nth-child(4n+3) .noteCard {
+    background-color: #b1b4d7;
+}
+
+.noteContainer:nth-child(4n+4) .noteCard {
+    background-color: #89DAFF;
+}
+
+
+.noteCard {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.noteCard:hover {
+    transform: scale(1.02);
+}
+
+.cardHeader {
+    justify-content: space-between;
+}
+
+.cardTitle {
+    font-weight: bold;
+    color: #333;
+}
+
+.cardText {
+    color: #555;
+}
+
+.iconDelete {
+    color: #d9534f;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.iconDelete:hover {
+    color: #c9302c;
+}
+
+.iconEdit {
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.iconEdit:hover {
+    color: #31b0d5;
+}

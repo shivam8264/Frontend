@@ -1,0 +1,40 @@
+.container {
+    margin-top: 70px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.formLabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formControl {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.isInvalid {
+    border-color: #dc3545;
+}
+
+.invalidFeedback {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+.btnPrimary {
+    background-color: #3b8fe8;
+    border-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.btnPrimary:hover {
+    background-color: #0056b3;
+    color: white;
+}
