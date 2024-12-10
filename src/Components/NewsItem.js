@@ -112,7 +112,7 @@ const NewsItem = ({ title, description, imageUrl, newsUrl, author, date, source,
 
   return (
     <div className="container my-3 p-1">
-      <div className={`card news-card p-3 mb-5 bg-white rounded ${styles.card}`}>
+      <div className={`card news-card  mb-5 bg-white rounded ${styles.card}`}>
         <span className={`position-absolute top-0 translate-middle badge rounded-pill bg-${color}`} style={{ left: '90%', zIndex: '1' }}>
           {source}
         </span>
@@ -161,7 +161,7 @@ const NewsItem = ({ title, description, imageUrl, newsUrl, author, date, source,
                   <i
                     className="fa-brands fa-x-twitter fs-4 mx-2 icon-hover"
                     title="Share on X"
-                    style={{ color: "#1DA1F2" }}
+                    style={{ color: "#000000" }}
                     onClick={() => handleShareClick('twitter')}
                   ></i>
                   <i

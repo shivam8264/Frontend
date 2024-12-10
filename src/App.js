@@ -23,7 +23,7 @@ export class App extends Component {
 
   state = {
     progress: 0,
-    country: 'in',
+    country: 'us',
     searchQuery: ''
   }
 

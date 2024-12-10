@@ -20,7 +20,7 @@ const categoryColors = {
 
 export class News extends Component {
   static defaultProps = {
-    country: 'in',
+    country: 'us',
     pageSize: 6,
     category: 'general',
     color: 'warning',
@@ -89,6 +89,7 @@ export class News extends Component {
     let data = await fetch(url);
     this.props.setProgress(70);
     let parseData = await data.json();
+    // console.log("Fetched Articles: ", parseData.articles);
     this.setState({
       articles: parseData.articles,
       totalResults: parseData.totalResults,
