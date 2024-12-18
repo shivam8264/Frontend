@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import { useSelector } from 'react-redux'; 
 import styles from '../MessageBoard.module.css';
 
-const socket = io('http://localhost:5000');
+const socket = io(process.env.REACT_APP_SERVER_URL);
 
 const MessageBoard = () => {
     const [messages, setMessages] = useState([]);
@@ -26,7 +26,7 @@ const MessageBoard = () => {
 
     const fetchMessages = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/comments/messages');
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/comments/messages`);
             const data = await response.json();
             if (data.success) {
                 setMessages(data.data);

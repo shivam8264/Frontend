@@ -6,7 +6,7 @@ export const submitContactMessage = createAsyncThunk(
     async (contactData, thunkAPI) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:5000/api/contact/submit', contactData, {
+            const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/contact/submit`, contactData, {
                 headers: {
                     'token': token
                 },

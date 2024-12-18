@@ -4,7 +4,7 @@ import axios from 'axios';
 const getAuthToken = () => localStorage.getItem('token');
 
 export const fetchNotes = createAsyncThunk('notes/fetchNotes', async () => {
-    const response = await axios.get('http://localhost:5000/api/notes/fetchallnotes', {
+    const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/notes/fetchallnotes`, {
         headers: {
             'token': getAuthToken()
         }
@@ -13,7 +13,7 @@ export const fetchNotes = createAsyncThunk('notes/fetchNotes', async () => {
 });
 
 export const addNewNote = createAsyncThunk('notes/addNewNote', async (newNote) => {
-    const response = await axios.post('http://localhost:5000/api/notes/addnote', newNote, {
+    const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/notes/addnote`, newNote, {
         headers: {
             'token': getAuthToken()
         }
@@ -22,7 +22,7 @@ export const addNewNote = createAsyncThunk('notes/addNewNote', async (newNote) =
 });
 
 export const updateNote = createAsyncThunk('notes/updateNote', async (updatedNote) => {
-    const response = await axios.put(`http://localhost:5000/api/notes/updatenote/${updatedNote._id}`, updatedNote, {
+    const response = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/notes/updatenote/${updatedNote._id}`, updatedNote, {
         headers: {
             'token': getAuthToken()
         }
@@ -31,7 +31,7 @@ export const updateNote = createAsyncThunk('notes/updateNote', async (updatedNot
 });
 
 export const deleteNote = createAsyncThunk('notes/deleteNote', async (id) => {
-    await axios.delete(`http://localhost:5000/api/notes/deletenote/${id}`, {
+    await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api/notes/deletenote/${id}`, {
         headers: {
             'token': getAuthToken()
         }

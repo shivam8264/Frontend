@@ -7,7 +7,7 @@ export const toggleBookmark = createAsyncThunk(
   async (article, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5000/api/bookmarks/toggleBookmark', article, {
+      const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/bookmarks/toggleBookmark`, article, {
         headers: {
           'token': token
         }
@@ -25,7 +25,7 @@ export const fetchBookmarks = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/bookmarks/getBookmarks', {
+      const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/bookmarks/getBookmarks`, {
         headers: {
           'token': token
         }

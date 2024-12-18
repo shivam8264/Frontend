@@ -64,7 +64,7 @@ const Home = () => {
   useEffect(() => {
     const fetchUserCount = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/user-count');
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/user-count`);
         setUserCount(response.data.userCount);
       } catch (error) {
         console.error('Error fetching user count', error);

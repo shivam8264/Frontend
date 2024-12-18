@@ -6,7 +6,7 @@ const parsedUser = storedUser ? JSON.parse(storedUser) : null;
 
 export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/auth/login', credentials);
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/auth/login`, credentials);
         if (response.data.success) {
             const { authToken, user } = response.data;
             localStorage.setItem('token', authToken);
@@ -22,7 +22,7 @@ export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI
 
 export const signup = createAsyncThunk('auth/signup', async (userData, thunkAPI) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/auth/signup', userData);
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/auth/signup`, userData);
         if (response.data.success) {
             const { authToken, user } = response.data;
             localStorage.setItem('token', authToken);
