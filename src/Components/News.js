@@ -7,7 +7,7 @@ import { Modal, Button, Form } from 'react-bootstrap';
 import '../news.module.css';
 import { connect } from 'react-redux';
 
-
+const API_URL = process.env.REACT_APP_API_URL || 'https://newsapi.org/v2';
 const categoryColors = {
   general: '#F7D684',
   business: '#7FBCFE',
@@ -77,11 +77,11 @@ export class News extends Component {
     const { fromDate, toDate, page, filterApplied } = this.state;
 
     if (filterApplied) {
-      url = `https://newsapi.org/v2/everything?q=everything&from=${fromDate}&to=${toDate}&sortBy=popularity&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
+      url = `${API_URL}/everything?q=everything&from=${fromDate}&to=${toDate}&sortBy=popularity&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
     } else if (searchQuery) {
-      url = `https://newsapi.org/v2/everything?q=${searchQuery}&from=${fromDate}&to=${toDate}&sortBy=popularity&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
+      url = `${API_URL}/everything?q=${searchQuery}&from=${fromDate}&to=${toDate}&sortBy=popularity&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
     } else {
-      url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&from=${fromDate}&to=${toDate}&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
+      url = `${API_URL}/top-headlines?country=${country}&category=${category}&from=${fromDate}&to=${toDate}&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
     }
 
     this.props.setProgress(30);
@@ -104,11 +104,11 @@ export class News extends Component {
     const { fromDate, toDate, page, filterApplied } = this.state;
 
     if (filterApplied) {
-      url = `https://newsapi.org/v2/everything?q=everything&from=${fromDate}&to=${toDate}&sortBy=popularity&apiKey=${apiKey}&page=${page + 1}&pageSize=${pageSize}`;
+      url = `${API_URL}/everything?q=everything&from=${fromDate}&to=${toDate}&sortBy=popularity&apiKey=${apiKey}&page=${page + 1}&pageSize=${pageSize}`;
     } else if (searchQuery) {
-      url = `https://newsapi.org/v2/everything?q=${searchQuery}&from=${fromDate}&to=${toDate}&sortBy=popularity&apiKey=${apiKey}&page=${page + 1}&pageSize=${pageSize}`;
+      url = `${API_URL}/everything?q=${searchQuery}&from=${fromDate}&to=${toDate}&sortBy=popularity&apiKey=${apiKey}&page=${page + 1}&pageSize=${pageSize}`;
     } else {
-      url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&from=${fromDate}&to=${toDate}&apiKey=${apiKey}&page=${page + 1}&pageSize=${pageSize}`;
+      url = `${API_URL}/v2/top-headlines?country=${country}&category=${category}&from=${fromDate}&to=${toDate}&apiKey=${apiKey}&page=${page + 1}&pageSize=${pageSize}`;
     }
 
     this.setState({ page: page + 1 });
